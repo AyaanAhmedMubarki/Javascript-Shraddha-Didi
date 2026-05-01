@@ -210,37 +210,29 @@ In <code>for-of</code>, <code>div</code> itself is the element.</p>
 <h3 id="✅-create-element">✅ Create Element</h3>
 <p>let el = document.createElement(“div”);</p>
 <h3 id="✅-insert-elements">✅ Insert Elements</h3>
-<p>Method</p>
-<p>Where it inserts</p>
-<p><code>node.append(el)</code></p>
-<p>inside node (end)</p>
-<p><code>node.prepend(el)</code></p>
-<p>inside node (start)</p>
-<p><code>node.before(el)</code></p>
-<p>before node (outside)</p>
-<p><code>node.after(el)</code></p>
-<p>after node (outside)</p>
+<p>Method : Where it inserts</p>
+<p><code>node.append(el)</code>: inside node (end)</p>
+<p><code>node.prepend(el)</code>: inside node (start)</p>
+<p><code>node.before(el)</code>: before node (outside)</p>
+<p><code>node.after(el)</code>: after node (outside)</p>
 <h3 id="✅-remove-element">✅ Remove Element</h3>
-<p>node.remove();</p>
+<p><code>node.remove();</code></p>
 <hr>
 <h3 id="example-create-a-button-and-append">Example: Create a Button and Append</h3>
 <p>let newBtn = document.createElement(“button”);</p>
 <p>newBtn.innerText = “Click Me”;</p>
 <p>let div = document.querySelector(“div”);</p>
 <p>div.append(newBtn);</p>
-<h3 id="example-insert-paragraph-after-div-correct-✅">Example: Insert paragraph after div (Correct ✅)</h3>
+<h3 id="example-insert-paragraph-after-div">Example: Insert paragraph after div</h3>
 <p>If you want the paragraph <strong>after</strong> the div:</p>
 <p>let div = document.querySelector(“div”);</p>
 <p>let para = document.querySelector(“p”);</p>
 <p>div.after(para);</p>
-<p>⚠️ In your notes, <code>appendafter()</code> is not a valid method.<br>
-Correct method is: <strong><code>after()</code></strong>.</p>
 <hr>
 <h3 id="example-create-a-heading--insert-at-start-of-body">Example: Create a heading &amp; insert at start of body</h3>
 <p>let newHeading = document.createElement(“h1”);</p>
 <p>newHeading.innerHTML = “<i>This is heading created through DOM feature</i>”;</p>
 <p>document.querySelector(“body”).prepend(newHeading);</p>
-<p>✅ Note: You must call <code>prepend(newHeading)</code> properly.</p>
 <hr>
 <h3 id="example-remove-paragraph">Example: Remove paragraph</h3>
 <p>let para1 = document.querySelector(“p”);</p>
@@ -248,20 +240,25 @@ Correct method is: <strong><code>after()</code></strong>.</p>
 <hr>
 <h1 id="✅-practice-questions-part-2">✅ Practice Questions (Part 2)</h1>
 <hr>
-<h2 id="q1-create-a-red-button--insert-as-first-element-in-body"><strong>Q1) Create a red button &amp; insert as first element in body</strong></h2>
+<h2 id="create-a-new-button-element.-give-it-a-text-click-me-background-color-of-red-and-text-color-of-white.-insert-the-button-as-the-first-element-inside-the-body-tag">1) Create a new button element. Give it a text “Click Me”, background color of red and text color of white. Insert the button as the first element inside the body tag</h2>
 <p>let newBtn = document.createElement(“button”);</p>
 <p>newBtn.innerText = “Click Me”;</p>
 <p>newBtn.style.backgroundColor = “red”;</p>
 <p>newBtn.style.color = “white”;</p>
 <p>document.querySelector(“body”).prepend(newBtn);</p>
-<p>``</p>
 <hr>
-<h2 id="q2-add-a-new-css-class-without-removing-old-class-classlist"><strong>Q2) Add a new CSS class without removing old class (classList)</strong></h2>
+<h2 id="create-a-p-tag-in-html-and-give-it-a-class-and-some-style.-now-create-a-new-class-in-css-and-try-to-append-this-class-to-the-p-element.--did-you-notice-how-you-overwrite-the-class-name-when-you-add-a-new-class.-solve-this-problem-using-classlist.">*2)Create a <p> tag in html and give it a class and some style. Now create a new class in CSS and try to append this class to the </p><p> element.  Did you notice how you overwrite the class name when you add a new class. Solve this problem using classList.</p></h2>
 <h3 id="html-1"><strong>HTML</strong></h3>
 <p><code>&lt;p class="oldClass"&gt;This is a paragraph in DOM Practice Question&lt;/p&gt;</code></p>
 <h3 id="css"><strong>CSS</strong></h3>
-<p>.oldClass { color: red; }</p>
-<p>.newClass { background-color: green; }</p>
+<p>.oldClass<br>
+{<br>
+color: red;<br>
+}</p>
+<p>.newClass<br>
+{<br>
+background-color: green;<br>
+}</p>
 <h3 id="js-1">JS</h3>
 <p>let para = document.querySelector(“p”);</p>
 <p>para.classList.add(“newClass”);</p>
